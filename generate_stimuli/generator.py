@@ -142,9 +142,9 @@ def generate_stimuli(seed=13, total_prep_words=5, structures=("short", "medium",
                     # build probes: scene probe uses the PP strings; subject probe uses subject noun
                     pp1_text = row[f"{p1_pref}"]
                     pp2_text = row[f"{p2_pref}"]
-                    scene_q1 = _scene_probe_for_pp(row.get("subject"), row.get("subject_number"), pp1_text, language=language)
-                    scene_q2 = _scene_probe_for_pp(row.get("subject"), row.get("subject_number"), pp2_text, language=language)
-                    subject_q = _subject_probe_from_row(row, language=language)
+                    # scene_q1 = _scene_probe_for_pp(row.get("subject"), row.get("subject_number"), pp1_text, language=language)
+                    # scene_q2 = _scene_probe_for_pp(row.get("subject"), row.get("subject_number"), pp2_text, language=language)
+                    # subject_q = _subject_probe_from_row(row, language=language)
 
                     stimuli.append(
                         {
@@ -196,9 +196,9 @@ def generate_stimuli(seed=13, total_prep_words=5, structures=("short", "medium",
                             "PP2_Number": row[f"{p2_pref}_number"],
                             "PP_Word_Budget": row["pp_word_budget"],
                             # "PP_Order": pp_order,
-                            "scene_probe_1": scene_q1,
-                            "scene_probe_2": scene_q2,
-                            "subject_probe": subject_q,
+                            # "scene_probe_1": scene_q1,
+                            # "scene_probe_2": scene_q2,
+                            # "subject_probe": subject_q,
                         }
                     )
     return stimuli
